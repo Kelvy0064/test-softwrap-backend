@@ -7,9 +7,10 @@ router.get('/table', async (req, res) => {
         const page = req.query.page
         const limit = parseInt(req.query.limit)
         const skip = limit * (page - 1)
+        const amount = await User.count()
         await User.find().skip(skip).limit(limit).exec((err, user) => {
             if (err) throw err
-            return res.status(200).send(user)
+            return res.status(200).send({ user, amount })
         })
     } catch (err) {
         return res.status(400).send({ error: 'Erro ao carregar os dados.' })
