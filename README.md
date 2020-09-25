@@ -1,8 +1,13 @@
-# test-softwrap-backend
-
+test-softwrap-backend
 O QUE É
 
 É uma aplicação que permite gerenciar dados de uma pessoa.
+
+CONVENÇÕES UTILIZADAS
+
+Foi utilizado eslint para a garantia de padronização e boas praticas
+
+Todas as classes e variáveis nomeadas em inglês
 
 TECNOLOGIAS USADAS
 
@@ -15,6 +20,8 @@ O motivo das tecnologias de desenvolvimento escolhidas, foram por eu já ter um 
 DESCRIÇÃO DAS FUNCIONALIDADES
 
 Para as requisições foram ultilizado o método fecth()
+
+Todos os endpoints da Api retornam mensagem de sucesso ou erro, que são mostradas pelo frontend através de um toast
 
 Salvar (POST): O programa permite salvar um número ilimitado de registro, porém o mesmo não permite salvar dois registros com o mesmo cpf e nem enviar dados em branco, passando por um tratamento pelo frontend antes de fazer a requisição. O programa também realiza a validação do cpf, mas para fins de testes, é permitido salvar um documento o mesmo não impedi salvar um cpf inválido.
 
